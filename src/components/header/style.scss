@@ -1,0 +1,113 @@
+header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 35vw;
+
+        li{
+            cursor: pointer;
+            font-size: larger;
+            font-weight: bold;
+
+            a{
+                text-decoration:  none;
+                color: black;
+            }
+        }
+    }
+}
+
+
+
+
+.hamburguer{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar{
+   
+    
+    
+    
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+   
+    
+}
+
+
+@media (max-width: 768px) {
+
+    .hamburguer{
+        display: flex;
+        z-index: 30;
+    }
+
+    .navbar-links{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 30px;
+        background-color: #ffffff;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 20;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+    
+    .navbar-links.active{
+        transform: translateX(0);
+    }
+}
+
+.hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar-overlay {
+    
+    position: fixed; /* Fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100%;     /* Ocupa toda a largura */
+    height: 100%;    /* Ocupa toda a altura */
+    
+    /* Se quiser escuro: */
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+    /* Se quiser INVISÍVEL (só para detectar clique), use: */
+    /* background-color: transparent; */
+    
+    z-index: 15;     /* Atrás do menu, na frente do site */
+    cursor: pointer; /* Mostra a mãozinha para indicar clique */
+  }

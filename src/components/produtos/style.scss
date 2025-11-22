@@ -1,0 +1,24 @@
+.produtos{
+    
+    figure{
+        display: flex;
+        justify-content: center;
+        gap:20px;
+        flex-wrap: wrap;
+
+        
+
+        img{
+            cursor:pointer;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos{
+        img{
+            width: 40vw;
+        }
+    }
+    
+}

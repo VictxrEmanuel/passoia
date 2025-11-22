@@ -1,0 +1,54 @@
+footer{
+    border-top: solid rgb(238, 230, 230);
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200px;
+    height: 30vh;
+    align-items: center;
+    margin-left: 50px;
+    
+
+    h4{
+        margin-top: 20px;
+        padding-bottom: 20px;
+        font-size: larger;
+    }
+
+    nav{
+        li{
+            list-style: none;
+            color:#2D2D2D;
+            font-weight: 300;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.pagamento{
+    figure{
+        width: 30vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        img{
+            width: 50px;
+        }
+    }
+}
+
+.redes{
+    figure{
+        width: 30vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    
+        img{
+            cursor: pointer;
+        }
+    }
+
+}
