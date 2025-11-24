@@ -12,7 +12,7 @@ function App(){
     <Produto  />
     <Lancamentos  />
     
-    <Banner className="NovidadesImg" imagem="bannerLapis.png" alt="Banner onde mostra varios pinceis de maquiagem"></Banner>
+    <Banner imagem="bannerLapis.png" alt="Banner onde mostra varios pinceis de maquiagem" />
     <Footer />
     </>
   )
